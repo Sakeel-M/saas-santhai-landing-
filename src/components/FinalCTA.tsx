@@ -31,11 +31,11 @@ export default function FinalCTA() {
                 <h2 className="reveal-up">Ready to ship and launch with a real system?</h2>
                 <p className="final-cta__sub reveal-up reveal-delay-1">Build with clarity. Publish for discovery. Improve with feedback. Grow with momentum.</p>
                 <div className="final-cta__buttons reveal-up reveal-delay-2">
-                    <a href="http://app.saassanthai.com/" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg">
+                    <a href="https://app.saassandhai.com/login" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
                         Get Started
                     </a>
-                    <a href="http://app.saassanthai.com/" target="_blank" rel="noopener noreferrer" className="btn btn--ghost-light btn--lg">Publish Your Product</a>
+                    <a href="https://app.saassandhai.com/login" target="_blank" rel="noopener noreferrer" className="btn btn--ghost-light btn--lg">Publish Your Product</a>
                 </div>
             </div>
         </section>

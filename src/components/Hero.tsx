@@ -57,7 +57,7 @@ export default function Hero() {
 
                 <div ref={r3} className="reveal-up reveal-delay-2">
                     <div className="hero__ctas">
-                        <a href="http://app.saassanthai.com/" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg">
+                        <a href="https://app.saassandhai.com/login" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--lg">
                             Start Building &amp; Publishing
                         </a>
                         <a href="#how-it-works" className="btn btn--ghost btn--lg">

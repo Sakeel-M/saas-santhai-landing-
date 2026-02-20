@@ -26,7 +26,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="navbar__actions">
-                    <a href="http://app.saassanthai.com/" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">Get Started</a>
+                    <a href="https://app.saassandhai.com/login" target="_blank" rel="noopener noreferrer" className="btn btn--primary btn--sm">Get Started</a>
                     <button
                         className={`hamburger${menuOpen ? ' hamburger--active' : ''}`}
                         onClick={() => setMenuOpen(!menuOpen)}

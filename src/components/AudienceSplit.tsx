@@ -54,7 +54,7 @@ export default function AudienceSplit() {
                                 <li key={i}><CheckIcon color="#B91C1C" /><span>{p}</span></li>
                             ))}
                         </ul>
-                        <a href="http://app.saassanthai.com/" target="_blank" rel="noopener noreferrer" className="btn btn--primary">Build Your First Product</a>
+                        <a href="https://app.saassandhai.com/login" target="_blank" rel="noopener noreferrer" className="btn btn--primary">Build Your First Product</a>
                     </div>
 
                     {/* Product Owners */}
@@ -79,7 +79,7 @@ export default function AudienceSplit() {
                                 <li key={i}><CheckIcon color="#1F2937" /><span>{p}</span></li>
                             ))}
                         </ul>
-                        <a href="http://app.saassanthai.com/" target="_blank" rel="noopener noreferrer" className="btn btn--outline-dark">Publish Your Product</a>
+                        <a href="https://app.saassandhai.com/login" target="_blank" rel="noopener noreferrer" className="btn btn--outline-dark">Publish Your Product</a>
                     </div>
                 </div>
             </div>
