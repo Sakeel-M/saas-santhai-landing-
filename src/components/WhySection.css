@@ -1,0 +1,117 @@
+.why .why__layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.why__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 32px 0;
+}
+
+.why__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 18px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    transition: all 0.3s ease;
+}
+
+.why__item:hover {
+    border-color: var(--deep-red-light);
+    box-shadow: 0 4px 12px rgba(185, 28, 28, 0.06);
+    transform: translateX(4px);
+}
+
+.why__item-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--deep-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: white;
+    margin-top: 1px;
+}
+
+.why__item p {
+    font-size: 0.975rem;
+    color: var(--charcoal-light);
+    line-height: 1.5;
+}
+
+.why__closing {
+    font-size: 1rem;
+    color: var(--charcoal-light);
+    line-height: 1.8;
+    max-width: 520px;
+}
+
+.why__visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why__svg {
+    width: 100%;
+    max-width: 420px;
+    filter: drop-shadow(0 4px 24px rgba(0,0,0,0.06));
+    border-radius: 20px;
+}
+
+/* Path draw animation — updated dasharray for new path length (~380) */
+.why__path-line {
+    stroke-dasharray: 420;
+    stroke-dashoffset: 420;
+    animation: drawPath 2s cubic-bezier(0.4, 0, 0.2, 1) forwards 0.6s;
+}
+
+@keyframes drawPath {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Arrow pulse */
+.why__arrow {
+    animation: arrowPulse 2s ease-in-out infinite;
+}
+
+@keyframes arrowPulse {
+    0%, 100% { opacity: 1;   }
+    50%       { opacity: 0.4; }
+}
+
+/* Glow ring on Node 3 — subtle pulse */
+.why__svg circle[r="33"] {
+    animation: ringPulse 3s ease-in-out infinite;
+}
+
+@keyframes ringPulse {
+    0%, 100% { stroke-opacity: 0.18; r: 33; }
+    50%       { stroke-opacity: 0.08; r: 36; }
+}
+
+@media (max-width: 900px) {
+    .why .why__layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .why__visual {
+        order: -1;
+    }
+
+    .why__svg {
+        max-width: 340px;
+    }
+}

@@ -1,0 +1,132 @@
+.final-cta {
+    padding: 120px 0;
+    text-align: center;
+    background: var(--charcoal);
+    position: relative;
+    overflow: hidden;
+}
+
+.final-cta__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.final-cta__shape {
+    animation: float1 20s ease-in-out infinite;
+}
+
+.final-cta__shape--2 {
+    animation: float2 25s ease-in-out infinite;
+}
+
+.final-cta__shape--3 {
+    animation: float3 18s ease-in-out infinite;
+}
+
+@keyframes float1 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes float2 {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-10px) scale(1.02);
+    }
+}
+
+@keyframes float3 {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(20deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(30deg);
+    }
+}
+
+.final-cta__content {
+    position: relative;
+    z-index: 1;
+}
+
+.final-cta h2 {
+    color: var(--white);
+    font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+    font-weight: 800;
+    margin-bottom: 16px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.final-cta__sub {
+    font-size: 1.05rem;
+    color: var(--gray-400);
+    max-width: 560px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.final-cta__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn--ghost-light {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 32px;
+    border-radius: var(--radius-md);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn--ghost-light:hover {
+    border-color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .final-cta {
+        padding: 80px 0;
+    }
+
+    .final-cta__buttons {
+        flex-direction: column;
+    }
+
+    .final-cta__buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

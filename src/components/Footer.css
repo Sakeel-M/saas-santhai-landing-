@@ -1,0 +1,23 @@
+.footer {
+    padding: 40px 0;
+    text-align: center;
+    background: var(--charcoal);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer__brand {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--gray-400);
+}
+
+.footer__brand span {
+    color: var(--deep-red);
+}
+
+.footer__tagline {
+    margin-top: 6px;
+    font-size: 0.84rem;
+    color: var(--gray-500);
+}

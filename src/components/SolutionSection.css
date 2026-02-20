@@ -1,0 +1,158 @@
+.solution {
+    padding: 110px 0;
+}
+
+.solution__steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin: 64px 0 48px;
+    position: relative;
+}
+
+.solution__connector {
+    position: absolute;
+    top: 48px;
+    left: 12%;
+    width: 76%;
+    height: 8px;
+    z-index: 0;
+}
+
+.solution__connector-line {
+    stroke-dasharray: 200;
+    stroke-dashoffset: 200;
+    animation: drawConnector 2s ease forwards 0.5s;
+}
+
+@keyframes drawConnector {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.step-card {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 32px 24px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-card:hover {
+    border-color: var(--deep-red-light);
+    box-shadow: 0 12px 32px rgba(185, 28, 28, 0.08);
+    transform: translateY(-6px);
+}
+
+.step-card__number {
+    width: 52px;
+    height: 52px;
+    background: var(--deep-red);
+    color: white;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover .step-card__number {
+    transform: scale(1.1);
+}
+
+.step-card__icon-wrap {
+    width: 56px;
+    height: 56px;
+    background: var(--deep-red-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    color: var(--deep-red);
+    transition: all 0.3s ease;
+}
+
+.step-card:hover .step-card__icon-wrap {
+    background: var(--deep-red);
+    color: white;
+}
+
+.step-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.step-card p {
+    font-size: 0.925rem;
+    color: var(--charcoal-light);
+    line-height: 1.7;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* 4th card — Earn (goal state) */
+.step-card--goal {
+    border-color: var(--deep-red-light);
+    background: var(--deep-red-subtle);
+}
+
+.step-card--goal .step-card__number {
+    background: linear-gradient(135deg, #B91C1C, #7F1D1D);
+    box-shadow: 0 4px 14px rgba(185, 28, 28, 0.35);
+}
+
+.step-card--goal .step-card__icon-wrap {
+    background: var(--deep-red-light);
+    color: var(--deep-red);
+}
+
+.step-card--goal:hover {
+    border-color: var(--deep-red);
+    box-shadow: 0 12px 32px rgba(185, 28, 28, 0.14);
+}
+
+.step-card--goal:hover .step-card__icon-wrap {
+    background: var(--deep-red);
+    color: white;
+}
+
+.solution__closing {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    font-family: var(--font-heading);
+}
+
+@media (max-width: 1024px) {
+    .solution__steps {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .solution__connector {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .solution {
+        padding: 72px 0;
+    }
+
+    .solution__steps {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
